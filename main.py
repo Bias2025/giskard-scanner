@@ -346,11 +346,11 @@ if st.button("🚀 Run LLM Security Scan", type="primary"):
     # Optional: let Giskard pick an internal LLM for detectors based on env (OpenAI, etc.)
     # If you previously used giskard.llm.set_llm_model("..."), you can skip it now.
     # Giskard will use configured env by default; if you *do* want to hint:
-    try:
-        # This is safe to skip; if it raises because LiteLLM is absent, we ignore.
-        giskard.llm.set_llm_model(None)  # Reset to defaults/env-based selection
-    except Exception:
-        pass
+    # try:
+    #     # This is safe to skip; if it raises because LiteLLM is absent, we ignore.
+    #     giskard.llm.set_llm_model(None)  # Reset to defaults/env-based selection
+    # except Exception:
+    #     pass
 
     # Build wrapped model
     wrapped = build_giskard_model(
